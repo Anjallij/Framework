@@ -21,7 +21,7 @@ s.skillrraydemoApplication();
 
 SkillraryDemoApplication sd=new SkillraryDemoApplication(driver);
 driverutilities.switchTabs(driver);
-driverutilities.dropDown(sd.getCoursedd(),p.getPropertyFiledata("coursedd"));
+driverutilities.dropDown(sd.getCourseadd(),p.getPropertyFiledata("coursedd"));
 
 TestingPage t=new TestingPage(driver);
 driverutilities.dragdrop(driver,t.getSeleniumtraining(),t.getCart());
