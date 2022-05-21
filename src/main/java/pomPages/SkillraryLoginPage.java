@@ -11,26 +11,32 @@ public class SkillraryLoginPage {
 	private WebElement gerasbtn;
 	
 	@FindBy(xpath="(//a[text()=' SkillRary Demo APP'])[2]")
-	private WebElement skillrarydemoapp;
+    private WebElement skillraydemoapp;
 	
 	@FindBy(name="q")
-	private WebElement searchtb;
+	private WebElement serachtb;
 	
-	@FindBy(xpath="//input[@value="go"]")
-	private WebElement searchbtn;
+	@FindBy(xpath="//input[@value='go']")
+	private WebElement serachbtn;
 	
-	public SkillraryLoginPage(WebDriver driver)
-	{
-		PageFactory.initElements(driver, this);
+	public SkillraryLoginPage(WebDriver driver) {
+		PageFactory.initElements(driver,this);
 	}
+	
 	public void gerasbutton() {
 		gerasbtn.click();
 	}
 	
-	public void skillrarydemoApplication() {
-		skillrarydemoapp.click();
+	public void skillrraydemoApplication() {
+		skillraydemoapp.click();
 	}
 	
-	public void searchtextbox(String)
+	public void searchtextbox(String name) {
+		serachtb.sendKeys(name);
+	}
+	
+	public void serachbutton() {
+		serachbtn.click();
+	}
 	
 }

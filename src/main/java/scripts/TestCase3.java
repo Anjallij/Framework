@@ -1,5 +1,7 @@
 package scripts;
 
+import java.io.IOException;
+
 import org.testng.annotations.Test;
 
 import genericlib.BaseClass;
@@ -8,31 +10,23 @@ import pomPages.SkillraryLoginPage;
 import pomPages.WhishlistPage;
 
 public class TestCase3 extends BaseClass{
+	@Test
+	public void tc3() throws IOException, InterruptedException {
+SkillraryLoginPage s=new SkillraryLoginPage(driver);
+s.searchtextbox(p.getPropertyFiledata("name"));
+s.serachbutton();
 
-	public static void main(String[] args) {
+CoreJavaPage c=new CoreJavaPage(driver);
+c.corejavaselenium();
 
+WhishlistPage w=new WhishlistPage(driver);
+driverutilities.switchFrames(driver);
+w.playbutton();
+Thread.sleep(10000);
+w.pausebutton();
+driverutilities.switchbackframe(driver);
+w.addtowhishlistbtn();
 
-		@Test
-		public void tc3() {
-			SkillraryLoginPage s=new SkillraryLoginPage(driver);
-			s.searchtextbox(p.getPropertyFiledata("name"));
-			s.searchbutton();
-			
-			CoreJavaPage c=new CoreJavaPage(driver);
-			c.corejavaselenium();
-			
-			WhishlistPage w=new WhishlistPage(driver);
-			driverutilities.switchFrames(driver);
-			w.playbutton();
-			Thread.sleep(1000);
-			w.pauseicon();
-			driverutilities.switchbackframe(driver);
-			w.addtowishlist();
-			
-			
-			
-		}
-		
 
 	}
 

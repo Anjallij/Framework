@@ -1,29 +1,20 @@
 package pomPages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CoreJavaPage {
+	
+@FindBy(xpath="//a[text()=' Core Java For Selenium Trainin']")
+private WebElement corejava;
 
-	public static void main(String[] args) {
+public CoreJavaPage(WebDriver driver) {
+	PageFactory.initElements(driver,this);
+}
 
-
-		@FindBy(xpath="//a[text()=' Core Java for Selenium']")
-		private WebElement corejava;
-		
-		public CoreJavaPage(WebDriver driver) {
-			PageFactory.initElements(driver, this);
-			
-			
-		}
-		public void corejavaselenium() {
-			corejava.click();
-		}
-		
-		
-		
-
-	}
-
+public void corejavaselenium() {
+	corejava.click();
+}
 }
