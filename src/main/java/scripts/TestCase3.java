@@ -22,7 +22,7 @@ c.corejavaselenium();
 WhishlistPage w=new WhishlistPage(driver);
 driverutilities.switchFrames(driver);
 w.playbutton();
-//Thread.sleep(10000);
+Thread.sleep(10000);
 w.pausebutton();
 driverutilities.switchbackframe(driver);
 w.addtowhishlistbtn();
