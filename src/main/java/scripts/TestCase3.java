@@ -11,7 +11,7 @@ import pomPages.WhishlistPage;
 
 public class TestCase3 extends BaseClass{
 	@Test
-	public void tc3() throws IOException, InterruptedException {
+	public void tc3()  {
 SkillraryLoginPage s=new SkillraryLoginPage(driver);
 s.searchtextbox(p.getPropertyFiledata("name"));
 s.serachbutton();
@@ -22,7 +22,7 @@ c.corejavaselenium();
 WhishlistPage w=new WhishlistPage(driver);
 driverutilities.switchFrames(driver);
 w.playbutton();
-Thread.sleep(10000);
+//Thread.sleep(10000);
 w.pausebutton();
 driverutilities.switchbackframe(driver);
 w.addtowhishlistbtn();
